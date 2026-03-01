@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&family=Inter:wght@300;500;700&display=swap');
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at 50% 20%, #1a1a1a 0%, #000 80%);
+  color:#e6dfd0;
+  text-align:center;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  opacity:0;
+  pointer-events:none;
+  transition:0.6s ease;
+  z-index:10;
+}
+
+nav.visible{
+  opacity:1;
+  pointer-events:auto;
+}
+
+nav a{
+  color:#c8b37a;
+  text-decoration:none;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+.fullscreen{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.title{
+  font-family:'Cinzel',serif;
+  font-size:60px;
+  letter-spacing:6px;
+  background:linear-gradient(to right,#c6a75e,#f0e3c0,#c6a75e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.cta-button{
+  margin-top:40px;
+  padding:20px 50px;
+  font-family:'Cinzel',serif;
+  font-size:20px;
+  letter-spacing:3px;
+  background:#7a0f0f;
+  border:2px solid #c6a75e;
+  color:white;
+  cursor:pointer;
+  transition:0.4s ease;
+}
+
+.cta-button:hover{
+  background:#a31717;
+}
+
+.countdown{
+  display:flex;
+  gap:40px;
+  margin-top:30px;
+  font-size:38px;
+  opacity:0;
+  transition:1s ease;
+}
+
+.countdown.visible{
+  opacity:1;
+}
+
+.countdown span{
+  display:block;
+  font-size:12px;
+  opacity:0.6;
+}
+
+.event-info{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  opacity:0;
+  transition:1s ease;
+}
+
+.event-info.visible{
+  opacity:1;
+}
+
+.gallery-grid{
+  margin-top:120px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:0 40px 60px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.page-section{
+  padding-top:120px;
+}
+
+.review-container{
+  max-width:700px;
+  margin:120px auto;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  text-align:left;
+}
+
+.review{
+  font-size:20px;
+  line-height:1.7;
+  border-left:4px solid #c6a75e;
+  padding-left:20px;
+}
+
+.review-author{
+  margin-top:10px;
+  font-size:14px;
+  letter-spacing:2px;
+  color:#c6a75e;
+}
+
+@media (max-width:768px){
+  .title{font-size:34px;letter-spacing:3px;}
+  nav{flex-wrap:wrap;gap:15px;padding:15px 10px;}
+  .cta-button{padding:15px 30px;font-size:16px;}
+}
